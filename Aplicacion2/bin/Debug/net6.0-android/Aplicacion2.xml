@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aplicacion2</name>
+    </assembly>
+    <members>
+        <member name="P:Aplicacion2.ViewModel.DetalleTareasViewModel.Text">
+            <inheritdoc cref="F:Aplicacion2.ViewModel.DetalleTareasViewModel.text"/>
+        </member>
+        <member name="F:Aplicacion2.ViewModel.DetalleTareasViewModel.atrasCommand">
+            <summary>The backing field for <see cref="P:Aplicacion2.ViewModel.DetalleTareasViewModel.AtrasCommand"/>.</summary>
+        </member>
+        <member name="P:Aplicacion2.ViewModel.DetalleTareasViewModel.AtrasCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Aplicacion2.ViewModel.DetalleTareasViewModel.Atras"/>.</summary>
+        </member>
+        <member name="P:Aplicacion2.ViewModel.MisTareasViewModel.Items">
+            <inheritdoc cref="F:Aplicacion2.ViewModel.MisTareasViewModel.items"/>
+        </member>
+        <member name="P:Aplicacion2.ViewModel.MisTareasViewModel.Text">
+            <inheritdoc cref="F:Aplicacion2.ViewModel.MisTareasViewModel.text"/>
+        </member>
+        <member name="F:Aplicacion2.ViewModel.MisTareasViewModel.agregarCommand">
+            <summary>The backing field for <see cref="P:Aplicacion2.ViewModel.MisTareasViewModel.AgregarCommand"/>.</summary>
+        </member>
+        <member name="P:Aplicacion2.ViewModel.MisTareasViewModel.AgregarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Aplicacion2.ViewModel.MisTareasViewModel.Agregar"/>.</summary>
+        </member>
+        <member name="F:Aplicacion2.ViewModel.MisTareasViewModel.borrarCommand">
+            <summary>The backing field for <see cref="P:Aplicacion2.ViewModel.MisTareasViewModel.BorrarCommand"/>.</summary>
+        </member>
+        <member name="P:Aplicacion2.ViewModel.MisTareasViewModel.BorrarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Aplicacion2.ViewModel.MisTareasViewModel.Borrar(System.String)"/>.</summary>
+        </member>
+        <member name="F:Aplicacion2.ViewModel.MisTareasViewModel.tapCommand">
+            <summary>The backing field for <see cref="P:Aplicacion2.ViewModel.MisTareasViewModel.TapCommand"/>.</summary>
+        </member>
+        <member name="P:Aplicacion2.ViewModel.MisTareasViewModel.TapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Aplicacion2.ViewModel.MisTareasViewModel.Tap(System.String)"/>.</summary>
+        </member>
+    </members>
+</doc>

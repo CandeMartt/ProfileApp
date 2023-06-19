@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicacion2.MisTareas"
+             Title="Mis Tareas"
+             xmlns:viewmodel="clr-namespace:Aplicacion2.ViewModel"
+             x:DataType="viewmodel:MisTareasViewModel">
+
+    <Grid RowDefinitions="100, Auto, *"
+          ColumnDefinitions=".75*,.25*"
+          Padding="20"
+          RowSpacing="20"
+          ColumnSpacing="10">
+
+        <Image Grid.ColumnSpan="2"
+               Source="list.svg"
+               BackgroundColor="Transparent"/>
+
+        <Entry Placeholder="¿Que debes hacer?"
+               Text="{Binding Text}"
+               Grid.Row="1"/>
+
+        <Button Text="Agregar"
+                Command="{Binding AgregarCommand}"
+                Grid.Row="1"
+                Grid.Column="1"/>
+
+        <CollectionView Grid.Row="2" Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Items}"
+                        SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type x:String}">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Borrar"
+                                           BackgroundColor="Red"
+                                           Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MisTareasViewModel}}, Path=BorrarCommand}"
+                                           CommandParameter="{Binding .}"/>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Grid Padding="5">
+                            <Frame>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer  
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MisTareasViewModel}}, Path=TapCommand}"
+                                        CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                                <Label Text="{Binding .}"
+                                       FontSize="24"/>
+                            </Frame>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+</ContentPage>
